@@ -1,40 +1,13 @@
-.infor {
+
+/* Container chung */
+.login-container {
   display: flex;
-  justify-content: center;
-  margin-top: 50px;
+  justify-content: space-between; /* 2 khối chiếm 2 bên */
+  align-items: center;
+  width: 100vw;                   /* toàn bộ chiều ngang viewport */
+  height: 100vh;                  /* toàn bộ chiều cao viewport */
+  box-sizing: border-box;
+  background-color: #efefef;      /* nền nếu muốn */
 }
 
-#vinhome {
-  z-index: -1;
-}
 
-/* Phần infor mặc định */
-.information {
-  width: 300px;
-  height: 200px;
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-  background-color: #00bcd4;
-  color: white;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Thay đổi mỗi khi di chuột vào */
-.information.active {
-  background-color: #007bff;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.information button {
-  background: none;
-  border: none;
-  padding: 8px 16px;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}

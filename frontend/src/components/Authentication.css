@@ -1,0 +1,166 @@
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Khung chính */
+
+.auth-wrapper {
+  display: flex;
+  /* wrapper nhận dạng Flex */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  /* giới hạn chiều rộng */
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+#auth-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px 20px;
+  background-color: white;
+  width: 100%;
+  /* thay min-width */
+  max-width: 450px;
+  /* giới hạn tối đa */
+  min-height: 400px;
+  box-sizing: border-box;
+}
+
+/* Tiêu đề */
+h2 {
+  color: rgb(161, 17, 17);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form container */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Input và nút cùng kích thước */
+.control,
+.controls button {
+  width: 350px;
+  border-radius: 8px;
+}
+
+.control {
+  position: relative;
+  margin: 15px 0;
+}
+
+/* Input */
+.control input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  background-color: white;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.control input:focus {
+  border-color: #0077ff;
+}
+
+/* Floating label */
+.control label {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  font-size: 13px;
+  background: white;
+  padding: 0 5px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.control input:focus+label,
+.control input:not(:placeholder-shown)+label {
+  top: -8px;
+  left: 10px;
+  font-size: 10px;
+  color: #005fcc;
+}
+
+/* Input lỗi */
+.control input.invalid {
+  border-color: red;
+}
+
+.control input.invalid+label {
+  color: red;
+}
+
+/* Dòng báo lỗi */
+.error-text {
+  color: red;
+  font-size: 10px;
+  margin-top: 4px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Nút đăng nhập */
+.controls button {
+  outline: none;
+  margin-top: 20px;
+  padding: 12px 10px;
+  background-color: #0058bc;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0px;
+}
+
+.controls button:hover {
+  background-color: #003e85;
+}
+
+.controls button.forgetPass {
+  background-color: white;
+  color: blue;
+  border: none;
+  width: auto;
+  padding: 0px;
+  margin-bottom: 10px;
+  display: block;        /* hoặc inline-block */
+  margin-left: auto;     /* đẩy sang bên phải */
+  text-align: right;  
+}
+
+.controls button.forgetPass:hover {
+  text-decoration: underline;
+  background-color: white;
+  /* giữ nền trắng khi hover */
+}

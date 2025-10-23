@@ -1,43 +1,14 @@
-import Header from "../components/Header";
-import Authen from "../components/Authentication";
-import vinhome from "../assets/images/vinhome_riverside.png";
-import { useState } from "react";
-import "./Login.css"
+import Authentication from "../components/Authentication.jsx";
+import Slideshow from "../components/Slideshow.jsx";
+import "./Login.css";
 
-function LoginPage() {
-  const [activeBox, setActiveBox] = useState("box1");
-
-  return (
-    <>
-      <Header/>
-      <div className="banner">
-        <img id="vinhome" src={vinhome} alt="Vinhome Riverside" />
-        <div className="infor">
-          <div
-            className={`information ${activeBox === "box1" ? "active" : ""}`}
-            onMouseEnter={() => setActiveBox("box1")}
-            onMouseLeave={() => setActiveBox(null)}
-          >
-            <p>
-              Kinh doanh bền vững, Giải pháp thông minh,
-              Lời khuyên cho bạn,
-              Dịch vụ số một.
-            </p>
-            <button>TÌM HIỂU THÊM</button>
-          </div>
-
-          <div
-            className={`information ${activeBox === "box2" ? "active" : ""}`}
-            onMouseEnter={() => setActiveBox("box2")}
-            onMouseLeave={() => setActiveBox("box1")}
-          >
-            <p>Chúng tôi có mặt tại hơn 11 tỉnh, thành phố trên khắp cả nước.</p>
-            <button>TÌM HIỂU THÊM</button>
-          </div>
+function Login(){
+    return(
+        <div className="login-container">
+            <Slideshow />
+            <Authentication />
         </div>
-      </div>
-    </>
-  );
+    )
 }
 
-export default LoginPage;
+export default Login;

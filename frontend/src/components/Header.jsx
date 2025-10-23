@@ -11,14 +11,13 @@ function Header() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > lastScrollY) {
-                setShow(false); // scroll xuống → ẩn
+                setShow(false);
             } else {
-                setShow(true);  // scroll lên → hiện
+                setShow(true);
             }
             setLastScrollY(window.scrollY);
         };
 
-        // Lắng nghe scroll của toàn trang
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
@@ -33,7 +32,7 @@ function Header() {
             <button id="Home">
                 <img src={Home} alt="Home Icon" className="HomeIcon" />
             </button>
-            
+
 
         </div>
     );
