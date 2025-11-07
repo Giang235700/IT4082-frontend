@@ -1,13 +1,9 @@
-
-/* Container chung */
 .login-container {
   display: flex;
-  justify-content: space-between; /* 2 khối chiếm 2 bên */
-  align-items: center;
-  width: 100vw;                   /* toàn bộ chiều ngang viewport */
-  height: 100vh;                  /* toàn bộ chiều cao viewport */
-  box-sizing: border-box;
-  background-color: #efefef;      /* nền nếu muốn */
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dce2eb;
+  overflow: hidden;
 }
-
-
